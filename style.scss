@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body{
+        background-color: #FA9494;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: circle(30% at right 70%);
+            background-color: #F8FFDB !important;
+            z-index: 0;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #81C6E8;
+            clip-path: circle(30% at 10% 10%);
+            z-index: 0;
+        }    
+        .container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .card{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 280px;
+                height: 400px;
+                margin: 30px;
+                border-radius: 5px;
+                box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+                background-color: rgba(255,255,255,0.2);
+                border-top: 1px solid rgba(255,255,255,0.5);
+                border-left: 1px solid rgba(255,255,255,0.5);
+                backdrop-filter: blur(5px);
+                overflow: hidden;
+                &:hover .content{
+                    top: 80px;
+                }
+                .content{
+                    position: absolute;
+                    margin: 20px;
+                    top: 480px;
+                    transition: top 0.4s;
+                    h1{
+                        margin-left: 140px;
+                        margin-top: -90px;
+                        font-size: 7em;
+                        color: rgba(255, 255, 255, 0.2);
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.2em;
+                        font-weight: 400;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-style: italic;
+                    }
+                    a{
+                        display: block;
+                        text-align: center;
+                        text-decoration: none;
+                        padding: 10px;
+                        background-color: #fff;
+                        border-radius: 5px;
+                        margin: 10px;
+                        color: #2d2d2d;
+                        &:hover{
+                            box-shadow: 20px 20px 50px rgba(255,255,255,0.5);
+                            transition: box-shadow 0.4s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
